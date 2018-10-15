@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-backgroundsplashplugin" version="0.0.2">
+
+	<name>BackgroundSplashPlugin</name>
+	<description>Secures your app from displaying a screenshot in task switchers under iOS. Keeps sensitive information private.</description>
+	<license>MIT</license>
+
+	<platform name="ios">
+
+    <config-file parent="/*" target="config.xml">
+      <feature name="BackgroundSplashPlugin">
+        <param name="ios-package" value="BackgroundSplashPlugin"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+		<header-file src="src/ios/BackgroundSplashPlugin.h"/>
+		<source-file src="src/ios/BackgroundSplashPlugin.m"/>
+	</platform>
+</plugin>

@@ -1,0 +1,25 @@
+{
+  "name": "cordova-plugin-backgroundsplashplugin",
+  "version": "0.0.2",
+  "description": "Secures your app from displaying a screenshot in task switchers under iOS. Keeps sensitive information private.",
+  "cordova": {
+    "id": "cordova-plugin-backgroundsplashplugin",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/armandobartolo/BackgroundSplashPlugin.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Armando Bártolo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/armandobartolo/BackgroundSplashPlugin/issues"
+  },
+  "homepage": "https://github.com/armandobartolo/BackgroundSplashPlugin#readme"
+}

@@ -1,11 +1,12 @@
 {
   "name": "cordova-plugin-backgroundsplashplugin",
-  "version": "1.0.0",
-  "description": "Secures your app from displaying a screenshot in task switchers under iOS. Keeps sensitive information private.",
+  "version": "2.0.0",
+  "description": "Secures your app from displaying a screenshot in task switchers under iOS and black screen on Android. Keeps sensitive information private.",
   "cordova": {
     "id": "cordova-plugin-backgroundsplashplugin",
     "platforms": [
-      "ios"
+      "ios",
+      "android"
     ]
   },
   "repository": {
@@ -14,6 +15,7 @@
   },
   "keywords": [
     "ecosystem:cordova",
+    "cordova-android",
     "cordova-ios"
   ],
   "author": "Armando Bártolo",

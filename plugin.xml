@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
-<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-backgroundsplashplugin" version="0.1.0">
-
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0" xmlns:android="http://schemas.android.com/apk/res/android" id="cordova-plugin-backgroundsplashplugin" version="2.0.0">
 	<name>BackgroundSplashPlugin</name>
-	<description>Secures your app from displaying a screenshot in task switchers under iOS. Keeps sensitive information private.</description>
+	<description>Secures your app from displaying a screenshot in task switchers under iOS and black screen on Android. Keeps sensitive information private.</description>
 	<license>MIT</license>
-
+	<platform name="android">
+		<config-file parent="/*" target="res/xml/config.xml">
+		<feature name="BackgroundSplashPlugin">
+			<param name="android-package" value="org.armando.backgroundsplash.BackgroundSplashPlugin"/>
+			<param name="onload" value="true" />
+		</feature>
+		</config-file>
+		<source-file src="src/android/BackgroundSplashPlugin.java" target-dir="src/org/armando/backgroundsplash"/>
+	</platform>
 	<platform name="ios">
-
-    <config-file parent="/*" target="config.xml">
-      <feature name="BackgroundSplashPlugin">
-        <param name="ios-package" value="BackgroundSplashPlugin"/>
-        <param name="onload" value="true" />
-      </feature>
-    </config-file>
-
+		<config-file parent="/*" target="config.xml">
+			<feature name="BackgroundSplashPlugin">
+				<param name="ios-package" value="BackgroundSplashPlugin"/>
+				<param name="onload" value="true" />
+			</feature>
+		</config-file>
 		<header-file src="src/ios/BackgroundSplashPlugin.h"/>
 		<source-file src="src/ios/BackgroundSplashPlugin.m"/>
 	</platform>
